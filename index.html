@@ -45,29 +45,170 @@
 		<div id="imageDrawer" class="drawer">
 			<div class="drawer-content">
 				<span class="close" id="closeImageDrawer">&times;</span>
-				<h2>Imagen</h2>
-				<p>Estilos imagen.</p>
-				<label for="fileInput" class="file-label">
-					<svg
-						xmlns="http://www.w3.org/2000/svg"
-						class="iborrainputfile"
-						width="20"
-						height="17"
-						viewBox="0 0 20 17"
-					>
-						<path
-							d="M10 0l-5.2 4.9h3.3v5.1h3.8v-5.1h3.3l-5.2-4.9zm9.3 11.5l-3.2-2.1h-2l3.4 2.6h-3.5c-.1 0-.2.1-.2.1l-.8 2.3h-6l-.8-2.2c-.1-.1-.1-.2-.2-.2h-3.6l3.4-2.6h-2l-3.2 2.1c-.4.3-.7 1-.6 1.5l.6 3.1c.1.5.7.9 1.2.9h16.3c.6 0 1.1-.4 1.3-.9l.6-3.1c.1-.5-.2-1.2-.7-1.5z"
-						></path>
-					</svg>
-					Cargar Imagen
-				</label>
-				<input
-					type="file"
-					name="fileInput"
-					id="fileInput"
-					accept="image/png, image/gif, image/jpeg"
-					style="display: none"
-				/>
+				<form class="imagen-form">
+					<div class="adjuntar-imagen">
+						<label for="fileInput" class="file-label">
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								class="iborrainputfile"
+								width="20"
+								height="17"
+								viewBox="0 0 20 17"
+							>
+								<path
+									d="M10 0l-5.2 4.9h3.3v5.1h3.8v-5.1h3.3l-5.2-4.9zm9.3 11.5l-3.2-2.1h-2l3.4 2.6h-3.5c-.1 0-.2.1-.2.1l-.8 2.3h-6l-.8-2.2c-.1-.1-.1-.2-.2-.2h-3.6l3.4-2.6h-2l-3.2 2.1c-.4.3-.7 1-.6 1.5l.6 3.1c.1.5.7.9 1.2.9h16.3c.6 0 1.1-.4 1.3-.9l.6-3.1c.1-.5-.2-1.2-.7-1.5z"
+								></path>
+							</svg>
+							Cargar Imagen
+						</label>
+						<input
+							type="file"
+							name="fileInput"
+							id="fileInput"
+							accept="image/png, image/gif, image/jpeg"
+							style="display: none"
+						/>
+					</div>
+
+					<div class="fondo-seccion">
+						<h3 class="fondo-titulo">FONDO</h3>
+						<div class="fondo">
+							<div class="mini-color">
+								<input
+									type="color"
+									id="fondoImagen"
+									name="colores"
+									value="#FFFFFF"
+									aria-label="fondoImagen"
+								/>
+								<span id="fondo-background-color" aria-hidden="true"
+									>#FFFFFF</span
+								>
+							</div>
+							<div class="contenido-select">
+								<select id="seleccionarFondoImagen">
+									<option value="normal">normal</option>
+									<option value="multiply">multiply</option>
+									<option value="screen" selected>screen</option>
+									<option value="overlay">overlay</option>
+									<option value="darken">darken</option>
+									<option value="lighten">lighten</option>
+									<option value="color-dodge">color-dodge</option>
+									<option value="color-burn">color-burn</option>
+									<option value="hard-light">hard-light</option>
+									<option value="soft-light">soft-light</option>
+									<option value="difference">difference</option>
+									<option value="exclusion">exclusion</option>
+									<option value="hue">hue</option>
+									<option value="saturation">saturation</option>
+									<option value="color">color</option>
+									<option value="luminosity">luminosity</option>
+								</select>
+							</div>
+						</div>
+					</div>
+					<div class="range-de-filtros">
+						<h3>FILTROS</h3>
+						<div class="range-de-filtros">
+							<div class="input-de-filtros">
+								<label for="brightnessFiltro">BRILLO</label>
+								<input
+									type="range"
+									id="brightnessFiltro"
+									min="0"
+									max="1"
+									step="0.1"
+									value="1"
+									class="brightness-filtro"
+								/>
+							</div>
+							<div class="input-de-filtros">
+								<label for="opacityFiltro">OPACIDAD:</label>
+								<input
+									type="range"
+									id="opacityFiltro"
+									min="0"
+									max="1"
+									step="0.1"
+									value="1"
+									class="opacity-filtro"
+								/>
+							</div>
+							<div class="input-de-filtros">
+								<label for="contrastFiltro">CONTRASTE</label>
+								<input
+									type="range"
+									id="contrastFiltro"
+									min="100"
+									max="1000"
+									value="100"
+									class="contrast-filtro"
+								/>
+							</div>
+							<div class="input-de-filtros">
+								<label for="blurFiltro">DESENFOQUE</label>
+								<input
+									type="range"
+									id="blurFiltro"
+									min="0"
+									max="10"
+									step="0.1"
+									value="0"
+									class="blur-filtro"
+								/>
+							</div>
+							<div class="input-de-filtros">
+								<label for="grayscaleFiltro">ESCALA DE GRISES</label>
+								<input
+									type="range"
+									id="grayscaleFiltro"
+									min="0"
+									max="100"
+									step="1"
+									value="0"
+									class="grayscale-filtro"
+								/>
+							</div>
+							<div class="input-de-filtros">
+								<label for="sepiaFiltro">SEPIA:</label>
+								<input
+									type="range"
+									id="sepiaFiltro"
+									min="0"
+									max="100"
+									step="1"
+									value="0"
+									class="sepia-filtro"
+								/>
+							</div>
+							<div class="input-de-filtros">
+								<label for="hueFiltro">HUE</label>
+								<input
+									type="range"
+									id="hueFiltro"
+									min="0"
+									max="359"
+									step="1"
+									value="0"
+									class="hue-rotate-filtro"
+								/>
+							</div>
+							<div class="input-de-filtros">
+								<label for="saturateFiltro">SATURACION</label>
+								<input
+									type="range"
+									id="saturateFiltro"
+									min="100"
+									max="1000"
+									step="10"
+									value="100"
+									class="saturate-filtro"
+								/>
+							</div>
+						</div>
+					</div>
+					<button class="restablecer-filtros">Restablecer Filtros</button>
+				</form>
 			</div>
 		</div>
 
