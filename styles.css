@@ -6,6 +6,10 @@
 body {
 	font-family: Arial, sans-serif;
 }
+body.dark-mode {
+	background-color: #222;
+	color: #fff;
+}
 
 nav {
 	background-color: #333;

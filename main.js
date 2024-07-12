@@ -1,3 +1,5 @@
+//Drawer, cerrar y abrir
+
 document.getElementById("textButton").addEventListener("click", function () {
 	toggleDrawer("textDrawer", "imageDrawer");
 });
@@ -33,3 +35,14 @@ function toggleDrawer(openDrawerId, closeDrawerId) {
 function closeDrawer(drawerId) {
 	document.getElementById(drawerId).style.width = "0";
 }
+
+//Modo Oscuro
+
+document.addEventListener("DOMContentLoaded", function () {
+	const modoOscuroButton = document.getElementById("modoOscuro");
+	modoOscuroButton.addEventListener("click", toggleDarkMode);
+
+	function toggleDarkMode() {
+		document.body.classList.toggle("dark-mode");
+	}
+});
