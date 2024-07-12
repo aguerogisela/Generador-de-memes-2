@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Generador de memes</title>
+		<link rel="stylesheet" href="styles.css" />
+	</head>
+	<body>
+		<nav>
+			<!-- Navbar content -->
+			<h1>Generador de memes</h1>
+			<div class="buttons-container">
+				<button id="textButton">TEXTO</button>
+				<button id="imageButton">IMAGEN</button>
+				<button id="modoOscuro">Modo Oscuro</button>
+			</div>
+		</nav>
+		<section class="main-section">
+			<div class="image-container">
+				<!-- Central image or content -->
+				<div class="imagen-dentro" id="image">
+					<p class="texto-meme" id="texto-superior">TEXTO SUPERIOR</p>
+					<img src="imagen/1601.png" alt="" id="imgTag" class="img" />
+					<p class="texto-meme" id="texto-inferior">TEXTO INFERIOR</p>
+				</div>
+				<button id="downloadBtn">DOWNLOAD</button>
+			</div>
+		</section>
+
+		<div id="textDrawer" class="drawer">
+			<div class="drawer-content">
+				<span class="close" id="closeTextDrawer">&times;</span>
+				<h2>Texto</h2>
+				<p>Estilos de texto</p>
+			</div>
+		</div>
+
+		<div id="imageDrawer" class="drawer">
+			<div class="drawer-content">
+				<span class="close" id="closeImageDrawer">&times;</span>
+				<h2>Imagen</h2>
+				<p>Estilos imagen.</p>
+			</div>
+		</div>
+
+		<footer>
+			<p>
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error est
+				facilis porro exercitationem voluptatum beatae dolorem nobis! Eaque
+				illum cum quae voluptate, repudiandae minus perspiciatis doloremque
+				libero ab sapiente pariatur?
+			</p>
+		</footer>
+
+		<script src="main.js"></script>
+	</body>
+</html>
